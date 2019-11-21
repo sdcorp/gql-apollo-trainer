@@ -27,6 +27,10 @@ const server = new ApolloServer({
   typeDefs,
   // fieldName: (parent, args, context, info) => data;
   resolvers,
+  engine: {
+    apiKey: process.env.ENGINE_API_KEY,
+    schemaTag: 'production',
+  },
   dataSources: () => ({
     launchAPI: new LaunchAPI(),
     userAPI: new UserAPI({ store }),
