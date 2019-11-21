@@ -4,7 +4,10 @@
   "description": "This is the fullstack app for the [Apollo tutorial](http://apollographql.com/docs/tutorial/introduction.html). 🚀",
   "main": "index.js",
   "scripts": {
-    "start": "node ./start/server"
+    "start": "node ./start/server",
+    "build": "npm install --prefix start/server",
+    "heroku-prebuild": "npm install --prefix start/server",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
