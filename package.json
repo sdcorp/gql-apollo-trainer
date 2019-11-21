@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./start/server",
-    "build": "npm install --prefix start/server",
-    "heroku-prebuild": "npm install --prefix start/server",
-    "heroku-postbuild": "npm run build"
+    "heroku-prebuild": "npm install --prefix start/server"
   },
   "repository": {
     "type": "git",
